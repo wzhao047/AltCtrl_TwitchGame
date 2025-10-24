@@ -739,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   moveLimitY: 4
+  moveMagnitude: 5
   canSelect: 1
 --- !u!212 &1786645444
 SpriteRenderer:
@@ -1201,6 +1202,7 @@ MonoBehaviour:
   OnChatMessage:
     m_PersistentCalls:
       m_Calls: []
+  playerController: {fileID: 1786645443}
   pingCounter: 0
 --- !u!1 &2080743346
 GameObject:
