@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class RoundManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class RoundManager : MonoBehaviour
     public ChoiceGroup stage3RemainingCharacters;
     public ChoiceGroup stage4RemainingActions;
     public GameObject resultPanel;
-    public TMPro.TextMeshProUGUI resultText;
+    public TMP_Text resultText;
+    public float newRoundTime = 5f;
 
     private Sprite personA, personB, personC;
     private string actionA, actionB, actionC;
@@ -116,7 +118,7 @@ public class RoundManager : MonoBehaviour
 
     IEnumerator WaitAndShowStage3()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
 
         stage3RemainingCharacters.Init(remainingPeople.ToArray());
         stage3RemainingCharacters.gameObject.SetActive(true);
@@ -139,7 +141,7 @@ public class RoundManager : MonoBehaviour
 
     IEnumerator WaitAndShowStage4()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
 
         stage4RemainingActions.InitActionLabels(remainingActions.ToArray());
         stage4RemainingActions.gameObject.SetActive(true);
@@ -195,7 +197,7 @@ public class RoundManager : MonoBehaviour
     IEnumerator NextRoundDelay()
     {
         Debug.Log("[RoundManager] Starting 3 second delay before next round");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(newRoundTime);
         Debug.Log("[RoundManager] Delay complete, spawning next round");
         manager.SpawnNewRound();
         Destroy(gameObject);
