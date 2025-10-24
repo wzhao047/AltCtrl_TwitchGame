@@ -100,6 +100,7 @@ public class RoundManager : MonoBehaviour
     // Stage 2: Choose action for personA
     void OnStage2Choice(int index)
     {
+        Debug.Log("[RoundManager] Stage 2 choice made: " + index);
         string[] actions = { "Fuck", "Marry", "Kill" };
         actionA = actions[index];
 
@@ -168,8 +169,8 @@ public class RoundManager : MonoBehaviour
 
     void ShowResult()
     {
-
-        // Calculate ResultPanel position (follow Stage4’s position)
+        Debug.Log("[RoundManager] Showing result panel");
+        // Calculate ResultPanel position (follow Stage4's position)
         if (stage4RemainingActions != null && resultPanel != null)
         {
             Vector3 stage4Pos = stage4RemainingActions.transform.localPosition;
@@ -179,7 +180,7 @@ public class RoundManager : MonoBehaviour
         // Activate the result panel
         resultPanel.SetActive(true);
 
-        // Update the result text
+        // Update the result text - show all selections
         resultText.text =
             "Result:\n" +
             "A: " + personA.name + " → " + actionA + "\n" +
@@ -193,7 +194,9 @@ public class RoundManager : MonoBehaviour
 
     IEnumerator NextRoundDelay()
     {
+        Debug.Log("[RoundManager] Starting 3 second delay before next round");
         yield return new WaitForSeconds(3f);
+        Debug.Log("[RoundManager] Delay complete, spawning next round");
         manager.SpawnNewRound();
         Destroy(gameObject);
     }
