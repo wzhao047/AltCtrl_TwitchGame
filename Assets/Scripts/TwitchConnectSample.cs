@@ -13,6 +13,8 @@ public class TwitchConnect : MonoBehaviour
     public TextMeshProUGUI recentCommandsText;
     public UnityEvent<string, string> OnChatMessage;
 
+    [SerializeField] PlayerController playerController;
+
     TcpClient Twitch;
     StreamReader Reader;
     StreamWriter Writer;
@@ -103,11 +105,13 @@ public class TwitchConnect : MonoBehaviour
                 if (msg == "w" || msg == "W" || msg == "UP" || msg == "up" || msg == "Up")
                 {
                     Debug.Log("UP Registered");
+                    playerController.GoUP();
                     //call your keyword method here!
                 }
                 if (msg == "s" || msg == "S" || msg == "DOWN" || msg == "down" || msg == "Down")
                 {
                     Debug.Log("Down Registered");
+                    playerController.GoDown();
                     //call your keyword method here!
                 }
 

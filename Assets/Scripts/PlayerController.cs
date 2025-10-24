@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float moveLimitY = 4f;
+    public float moveMagnitude;
 
     // Whether the player can currently select an option
     public bool canSelect = true;
@@ -76,4 +77,18 @@ public class PlayerController : MonoBehaviour
     {
         canSelect = true;
     }
+
+    public void GoUP()
+    {
+        Vector3 newPos = transform.position + Vector3.up * moveMagnitude * moveSpeed * Time.deltaTime;
+        newPos.y = Mathf.Clamp(newPos.y, -moveLimitY, moveLimitY);
+        transform.position = newPos;
+    }
+    public void GoDown()
+    {
+        Vector3 newPos = transform.position + Vector3.up * -moveMagnitude * moveSpeed * Time.deltaTime;
+        newPos.y = Mathf.Clamp(newPos.y, -moveLimitY, moveLimitY);
+        transform.position = newPos;
+    }
+
 }
