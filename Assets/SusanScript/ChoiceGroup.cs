@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using TMPro;
 
 public class ChoiceGroup : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ChoiceGroup : MonoBehaviour
     public SpriteRenderer[] images;             // sprite renderers (character images)
     public float enlargeFactor = 1.5f;          // adjustable scale factor
     public Action<int> onChoiceSelected;
+    
 
     private int chosenIndex = -1;
     private bool locked = false;                // prevent multiple enlargements
@@ -88,7 +90,7 @@ public class ChoiceGroup : MonoBehaviour
         for (int i = 0; i < choices.Length; i++)
         {
             SpriteRenderer sr = choices[i].GetComponent<SpriteRenderer>();
-            TMPro.TextMeshPro text = choices[i].GetComponentInChildren<TMPro.TextMeshPro>();
+            TMP_Text text = choices[i].GetComponentInChildren<TMP_Text>();
 
             if (i == chosenIndex)
             {
@@ -99,7 +101,11 @@ public class ChoiceGroup : MonoBehaviour
                 {
                     // For image groups: raise image sorting order
                     if (i < images.Length && images[i] != null)
+                    {
                         images[i].sortingOrder = 11;
+
+                        
+                    }
                 }
                 else
                 {
@@ -108,8 +114,9 @@ public class ChoiceGroup : MonoBehaviour
                     {
                         text.color = Color.yellow;
                         text.fontSize *= 1.2f;
-                        text.renderer.sortingOrder = sr.sortingOrder + 1;
+                        text.GetComponent<Renderer>().sortingOrder = sr.sortingOrder + 1;
                     }
+                    
                 }
 
                 // Both image and text groups execute the same enlarge animation

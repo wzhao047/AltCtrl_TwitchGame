@@ -185,9 +185,9 @@ public class RoundManager : MonoBehaviour
         // Update the result text - show all selections
         resultText.text =
             "Result:\n" +
-            "A: " + personA.name + " → " + actionA + "\n" +
-            "B: " + personB.name + " → " + actionB + "\n" +
-            "C: " + personC.name + " → " + actionC;
+            "A: " + personA.name + " → " + actionA + "\n" + "WRONG" + "\n\n" +
+            "B: " + personB.name + " → " + actionB + "\n" + "WRONG" + "\n\n" +
+            "C: " + personC.name + " → " + actionC + "\n" + "WRONG" ;
 
         // Delay before spawning the next round
         StartCoroutine(NextRoundDelay());
