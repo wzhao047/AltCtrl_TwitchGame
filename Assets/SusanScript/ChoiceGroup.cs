@@ -30,36 +30,55 @@ public class ChoiceGroup : MonoBehaviour
             SpriteChoice sc = choices[i].GetComponent<SpriteChoice>();
             sc.Setup(this, i);
 
-            // If there are images, assign sprites
+            // Assign sprite to each image
             if (i < images.Length && images[i] != null)
             {
                 images[i].sprite = sprites[i];
             }
 
-            // If this is a text-based group (ActionGroup), clear any image remnants
-            TMPro.TextMeshPro text = choices[i].GetComponentInChildren<TMPro.TextMeshPro>();
-            if (text != null)
+            // Find the name label under this choice (child TMP)
+            TMPro.TextMeshPro nameLabel = choices[i].GetComponentInChildren<TMPro.TextMeshPro>();
+
+            if (nameLabel != null)
             {
-                text.text = ""; // Clear text (characters do not need it)
+                // Assign sprite name as text
+                nameLabel.text = sprites[i].name;
+                nameLabel.color = Color.white;
+
+                // Optional: ensure it's rendered above the sprite
+                nameLabel.GetComponent<Renderer>().sortingOrder = 12;
             }
         }
     }
 
+
     public void InitActionLabels(string[] actions)
     {
+        // Clear old name labels if they exist
+        foreach (var c in choices)
+        {
+            TMPro.TextMeshPro nameText = c.GetComponentInChildren<TMPro.TextMeshPro>();
+            if (nameText != null)
+            {
+                nameText.text = "";
+            }
+        }
+
         for (int i = 0; i < choices.Length && i < actions.Length; i++)
         {
             SpriteChoice sc = choices[i].GetComponent<SpriteChoice>();
             sc.SetupAction(this, i, actions[i]);
 
-            // If this is a text-based group, assign the TextMeshPro label
+            // Find TMP text component for the action label
             TMPro.TextMeshPro text = choices[i].GetComponentInChildren<TMPro.TextMeshPro>();
             if (text != null)
             {
                 text.text = actions[i];
+                text.color = Color.white;
             }
         }
     }
+
 
 
     public Sprite[] GetSprites()

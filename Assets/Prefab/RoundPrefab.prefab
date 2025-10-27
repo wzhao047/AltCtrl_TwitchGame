@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChoice
   index: 0
-  label: {fileID: 0}
+  label: {fileID: 758008404994213529}
 --- !u!61 &5403472644853505900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -468,14 +468,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 101
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 50
-  m_fontSizeMax: 101
+  m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -647,14 +647,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 101
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 50
-  m_fontSizeMax: 101
+  m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChoice
   index: 0
-  label: {fileID: 0}
+  label: {fileID: 2564452478563188582}
 --- !u!61 &1117969398101177774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1223,14 +1223,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 101
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 50
-  m_fontSizeMax: 101
+  m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1323,7 +1323,6 @@ MonoBehaviour:
   - {fileID: 8409853875747228189}
   images: []
   enlargeFactor: 1.5
-  choiceText: {fileID: 0}
 --- !u!1 &3501578586332054503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,14 +1756,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 101
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 50
-  m_fontSizeMax: 101
+  m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2154,7 +2153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChoice
   index: 0
-  label: {fileID: 0}
+  label: {fileID: 5359264101596477054}
 --- !u!61 &3334349290311252983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2390,7 +2389,6 @@ MonoBehaviour:
   - {fileID: 2120509152965146067}
   - {fileID: 8749155834237936161}
   enlargeFactor: 1.5
-  choiceText: {fileID: 0}
 --- !u!1 &5967664573649061202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,7 +2626,6 @@ MonoBehaviour:
   - {fileID: 4373515818868340190}
   - {fileID: 6226208579912600126}
   enlargeFactor: 1.5
-  choiceText: {fileID: 0}
 --- !u!1 &6270510175066263450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,14 +3440,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 101
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 50
-  m_fontSizeMax: 101
+  m_fontSizeMin: 30
+  m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3722,7 +3719,6 @@ MonoBehaviour:
   - {fileID: 7225612266117008902}
   images: []
   enlargeFactor: 1.5
-  choiceText: {fileID: 0}
 --- !u!1 &8204881603923081645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,7 +3826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChoice
   index: 0
-  label: {fileID: 0}
+  label: {fileID: 5908883806755296882}
 --- !u!61 &1714627654947166141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4137,7 +4133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChoice
   index: 0
-  label: {fileID: 0}
+  label: {fileID: 2549882026354010820}
 --- !u!61 &6448253760771220107
 BoxCollider2D:
   m_ObjectHideFlags: 0
