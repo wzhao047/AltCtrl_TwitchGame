@@ -43,7 +43,6 @@ public class ChoiceGroup : MonoBehaviour
             {
                 // Assign sprite name as text
                 nameLabel.text = sprites[i].name;
-                nameLabel.color = Color.white;
 
                 // Optional: ensure it's rendered above the sprite
                 nameLabel.GetComponent<Renderer>().sortingOrder = 12;
@@ -74,7 +73,6 @@ public class ChoiceGroup : MonoBehaviour
             if (text != null)
             {
                 text.text = actions[i];
-                text.color = Color.white;
             }
         }
     }
@@ -131,7 +129,6 @@ public class ChoiceGroup : MonoBehaviour
                     // For text groups: keep text on top and highlight visually
                     if (text != null)
                     {
-                        text.color = Color.yellow;
                         text.fontSize *= 1.2f;
                         text.GetComponent<Renderer>().sortingOrder = sr.sortingOrder + 1;
                     }
