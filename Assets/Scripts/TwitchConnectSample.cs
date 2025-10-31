@@ -102,13 +102,17 @@ public class TwitchConnect : MonoBehaviour
                 print(msg);
 
                 //This part is where script reads twitch chat msgs and compare them to your trigger words
-                if (msg == "w" || msg == "W" || msg == "UP" || msg == "up" || msg == "Up")
+                if (msg == "w" || msg == "W" || msg == "UP" || msg == "up" || msg == "Up" ||
+                    msg == "q" || msg == "Q" || msg == "e" || msg == "E" ||
+                    msg == "r" || msg == "R" || msg == "t" || msg == "T" || msg == "y" || msg == "Y")
                 {
                     Debug.Log("UP Registered");
                     playerController.GoUP();
                     //call your keyword method here!
                 }
-                if (msg == "s" || msg == "S" || msg == "DOWN" || msg == "down" || msg == "Down")
+                if (msg == "s" || msg == "S" || msg == "DOWN" || msg == "down" || msg == "Down" ||
+                    msg == "a" || msg == "A" || msg == "d" || msg == "D" ||
+                    msg == "f" || msg == "F" || msg == "g" || msg == "G" || msg == "h" || msg == "H")
                 {
                     Debug.Log("Down Registered");
                     playerController.GoDown();
