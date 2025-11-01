@@ -43,7 +43,7 @@ public class ChoiceGroup : MonoBehaviour
             {
                 // Assign sprite name as text
                 nameLabel.text = sprites[i].name;
-                nameLabel.color = Color.white;
+                //nameLabel.color = Color.white;
 
                 // Optional: ensure it's rendered above the sprite
                 nameLabel.GetComponent<Renderer>().sortingOrder = 12;
